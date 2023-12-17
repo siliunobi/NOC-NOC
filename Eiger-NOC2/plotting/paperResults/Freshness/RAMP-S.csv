@@ -1,0 +1,2 @@
+algorithm,threads,read_prop,value_size,txn_size,num_clients,num_servers,num_key,distribution,zipfian_constant,10,20,30,40,50,100,150,200,500,1000,3000
+RAMP-S,1000,0.95,1,16,5,5,1000000,zipfian,0.99,97.75,97.89,97.98,98.05,98.10,98.20,98.25,98.29,98.53,98.84,99.90

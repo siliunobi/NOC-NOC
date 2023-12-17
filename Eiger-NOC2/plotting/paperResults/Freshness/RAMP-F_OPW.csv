@@ -1,0 +1,2 @@
+algorithm,threads,read_prop,value_size,txn_size,num_clients,num_servers,num_key,distribution,zipfian_constant,10,20,30,40,50,100,150,200,500,1000,3000
+RAMP-F_OPW,1000,0.95,1,16,5,5,1000000,zipfian,0.99,96.95,97.76,98.07,98.25,98.38,98.76,98.93,99.05,99.43,99.67,99.99

@@ -1,0 +1,6 @@
+algorithm,threads,read_prop,value_size,txn_size,num_clients,num_servers,num_key,distribution,zipfian_constant,throughput,average_latency,read_latency,write_latency,99th_latency,95th_latency
+READ_ATOMIC_LIST,1000,0.95,1,16,5,5,1000000,zipfian,0.99,3636.263125,83.08,79.56,149.69,83.08,83.08
+READ_ATOMIC_LIST,1000,0.95,1,16,10,10,1000000,zipfian,0.99,6076.154375,99.40,95.22,178.77,99.40,99.40
+READ_ATOMIC_LIST,1000,0.95,1,16,15,15,1000000,zipfian,0.99,8218.899375,110.33,105.82,196.04,110.33,110.33
+READ_ATOMIC_LIST,1000,0.95,1,16,20,20,1000000,zipfian,0.99,10008.881875,120.77,115.89,213.27,120.77,120.77
+READ_ATOMIC_LIST,1000,0.95,1,16,25,25,1000000,zipfian,0.99,11724.359375,128.91,123.72,227.35,128.91,128.91

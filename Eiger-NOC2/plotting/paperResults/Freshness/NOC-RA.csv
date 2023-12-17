@@ -1,0 +1,2 @@
+algorithm,threads,read_prop,value_size,txn_size,num_clients,num_servers,num_key,distribution,zipfian_constant,10,20,30,40,50,100,150,200,500,1000,3000
+NOC-RA,1000,0.95,1,16,5,5,1000000,zipfian,0.99,87.11,88.68,89.23,89.55,89.75,90.26,90.57,90.86,92.89,95.66,99.69

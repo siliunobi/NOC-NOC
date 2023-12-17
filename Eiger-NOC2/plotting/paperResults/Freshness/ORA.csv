@@ -1,0 +1,2 @@
+algorithm,threads,read_prop,value_size,txn_size,num_clients,num_servers,num_key,distribution,zipfian_constant,10,20,30,40,50,100,150,200,500,1000,3000
+ORA,1000,0.95,1,16,5,5,1000000,zipfian,0.99,98.84,98.96,99.01,99.04,99.06,99.11,99.15,99.18,99.34,99.56,100.00

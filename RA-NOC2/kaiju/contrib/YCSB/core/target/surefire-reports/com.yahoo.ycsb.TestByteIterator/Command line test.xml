@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="luca-Lenovo-V15-IIL" failures="0" tests="1" name="com.yahoo.ycsb.TestByteIterator" time="0.014" errors="0" timestamp="14 Jul 2022 11:42:00 GMT">
+  <testcase classname="com.yahoo.ycsb.TestByteIterator" name="testRandomByteIterator" time="0.007"/>
+</testsuite>
