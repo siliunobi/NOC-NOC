@@ -57,6 +57,8 @@ The logs will be uploaded to the `output` folder.
 
 You can process the latest results by calling `bash process_latest_results.sh` or process a specific result by calling `python3 process_results.py "folder_name" "experiment_name"` and adding `--freshness` if you want to process data freshness and not latency/throughput.
 
+After processing your results you can generate a series of plots for the lastest result by calling `bash plot_latest.sh` in the plotting folder or plot a specific result by calling `python3 plot.py --dir <result-file-name> --experiment <exp-name>`.
+
 ## Further Questions
 
 For further information on the codebase, please refer to the [RAMP GitHub repository](https://github.com/pbailis/ramp-sigmod2014-code).

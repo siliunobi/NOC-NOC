@@ -18,46 +18,37 @@ haveGrid = False
 showPlot = False
 bar_width = 0.2
 spacing = 0.03
-allBar = True
-freshBar = True
+allBar = False
+freshBar = False
 plus = False
-normalize = True
+normalize = False
 normalizer = EIGER_PORT
 tp_label = "Throughput (ops/s)"
 lat_label = "Latency (ms)"
 
 zipfs = ["0.0", "0.3", "0.7", "0.8", "0.9", "0.99", "1.1", "1.2"]
 
-algorithms = ["EIGER", "EIGER_PORT", "EIGER_PORT_PLUS_PLUS"]
-saveTo = "./noplus/"
+algorithms = ["READ_ATOMIC_CONST_ORT", "READ_ATOMIC_FASTOPW", "READ_ATOMIC_LIST", "READ_ATOMIC_LORA", "READ_ATOMIC_STAMP"]
+saveTo = "./plots/noplus/"
 # edit this if you want to change the algorithms you can plot
 if plus:
-    algorithms = ["EIGER", "EIGER_PORT", "EIGER_PORT_PLUS", "EIGER_PORT_PLUS_PLUS"]
+    algorithms = ["READ_ATOMIC_CONST_ORT", "READ_ATOMIC_FASTOPW", "READ_ATOMIC_LIST", "READ_ATOMIC_LORA", "READ_ATOMIC_STAMP", "READ_ATOMIC_NOC"]
     saveTo = "./plots/plus/"
 
 if normalize:
-    algorithms = [normalizer, "EIGER_PORT_PLUS_PLUS"]
-    if normalizer == EIGER_PORT:
-        saveTo = "./plots/normalized/"
-        if plus:
-            saveTo = "./plots/normalizedPlusVsPort/"
-            algorithms = [normalizer, "EIGER_PORT_PLUS"]
-    else:
-        algorithms = ["EIGER_PORT", normalizer, "EIGER_PORT_PLUS_PLUS"]
-        saveTo = "./plots/normalizedVsPlus/"
+    algorithms = ["READ_ATOMIC_CONST_ORT", "READ_ATOMIC_FASTOPW", "READ_ATOMIC_LIST", "READ_ATOMIC_LORA", "READ_ATOMIC_STAMP"]
     tp_label = "Normalized Throughput"
     lat_label = "Normalized Latency"
 #algorithms = ["EIGER","EIGER_PORT", "EIGER_PORT_PLUS_PLUS"]
 # save the images as pdfs here
-
-if not allBar:
-    saveTo = saveTo + "noBar/"
  
 colors = {
-    "EIGER": "#1f77b4",
-    "EIGER_PORT": "#ff7f0e",
-    "EIGER_PORT_PLUS": "#2ca02c",
-    "EIGER_PORT_PLUS_PLUS": "#9467bd",
+    "READ_ATOMIC_CONST_ORT": "#1f77b4",
+    "READ_ATOMIC_FASTOPW": "#ff7f0e",
+    "READ_ATOMIC_LIST": "#2ca02c",
+    "READ_ATOMIC_LORA": "#9467bd",
+    "READ_ATOMIC_STAMP": "#d62728",
+    "READ_ATOMIC_NOC": "#8c564b",
     "0.0" : 'gray',
     "0.3": 'coral',
     "0.7": 'maroon',
@@ -69,10 +60,12 @@ colors = {
 }
 
 markers = {
-    "EIGER": "o",
-    "EIGER_PORT": "s",
-    "EIGER_PORT_PLUS": "v",
-    "EIGER_PORT_PLUS_PLUS": "x",
+    "READ_ATOMIC_CONST_ORT": "o",      # Circle
+    "READ_ATOMIC_FASTOPW": "s",        # Square
+    "READ_ATOMIC_LIST": "^",           # Triangle Up
+    "READ_ATOMIC_LORA": "D",           # Diamond
+    "READ_ATOMIC_STAMP": "v",          # Triangle Down
+    "READ_ATOMIC_NOC": "P",            # Plus (filled)
     "0.0" : 'o',
     "0.3": 's',
     "0.7": 'v',
@@ -106,10 +99,12 @@ bar_markers = {
 }
 
 names = {
-    "EIGER": "Eiger",
-    "EIGER_PORT": "Eiger-PORT",
-    "EIGER_PORT_PLUS": "Eiger-PORT+",
-    "EIGER_PORT_PLUS_PLUS": "Eiger-PORT++",
+    "READ_ATOMIC_CONST_ORT": "RA-NOC2", 
+    "READ_ATOMIC_FASTOPW": "RAMP-OPW",     
+    "READ_ATOMIC_LIST": "RAMP-F",         
+    "READ_ATOMIC_LORA": "LORA",          
+    "READ_ATOMIC_STAMP": "RAMP-S",          
+    "READ_ATOMIC_NOC": "RA-NOC",           
     "0.0" : "0",
     "0.3" : "0.3",
     "0.7" : "0.7",
