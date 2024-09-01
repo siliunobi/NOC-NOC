@@ -58,6 +58,7 @@ After processing your results you can generate a series of plots for the lastest
 The possible experiment names are: threads, read_prop, value_size, txn_size, num_servers, num_key, freshness.
 Any run of the plotting script with the exception of freshness will generated plots for the metric of the experiment name vs 99th percentile latency, 95th percentile latency, average latency, read latency, write latency, throughput. Additionally, it will generate a average latency vs throughput, read latency vs throughput and write latency vs throughput plot. Legends for the plots will be found in the plots/noplus folder, the plots will be in the plots/noplus/result-file-name folder.
 
+To generate a given plot from the paper therefore run the corresponding experiment for example number of client threads, then process its results, the run plot on the processed file, and identify among the generated plots the one you are looking for.
 
 ## Further Questions
 
