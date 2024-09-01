@@ -58,11 +58,11 @@ The logs will be uploaded to the `output` folder.
 You can process the latest results by calling `bash process_latest_results.sh` or process a specific result by calling `python3 process_results.py "folder_name" "experiment_name"` and adding `--freshness` if you want to process data freshness and not latency/throughput.
 
 After processing your results you can generate a series of plots for the lastest result by calling `bash plot_latest.sh` in the plotting folder or plot a specific result by calling `python3 plot.py --dir <result-file-name> --experiment <exp-name>`.
-The possible experiment names are: threads, read_prop, value_size, txn_size, num_servers, num_key, freshness.
+The possible experiment names are: threads, read_prop, value_size, txn_size, num_servers, num_key, distribution, freshness.
 Any run of the plotting script with the exception of freshness will generated plots for the metric of the experiment name vs 99th percentile latency, 95th percentile latency, average latency, read latency, write latency, throughput. Additionally, it will generate a average latency vs throughput, read latency vs throughput and write latency vs throughput plot.
 Legends for the plots will be found in the plots/noplus folder, the plots will be in the plots/noplus/result-file-name folder.
 
-To generate a given plot from the paper therefore run the corresponding experiment for example number of client threads, then process its results, the run plot on the processed file, and identify among the generated plots the one you are looking for.
+To generate a given plot from the paper therefore run the corresponding experiment for example number of client threads, then process its results, the run plot on the processed file, and identify among the generated plots the one you are looking for. Specifically, you may use this procedure to reproduce the results seen in Figure 9.
 
 ## Further Questions
 
